@@ -1,6 +1,6 @@
-package com.entity;
+package com.smartexpense.entity;
 
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Id;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -17,18 +17,17 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Table(name = "users")
 public class User {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	
 	private Long id;
-	private String Name;
-	
+	private String name;
+
 	@Column(unique = true)
 	private String email;
 	private String password;
 	private String role;
-	
-	
+
+
 
 }
